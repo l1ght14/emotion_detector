@@ -9,7 +9,7 @@ import soundfile
 
 st.set_page_config(page_title="Multimodal Emotion Detector", layout="wide")
 
-# Now import libraries that might have deeper dependencies or could be slower 
+# libraries that might have deeper dependencies or could be slower 
 from transformers import pipeline
 import whisper
 import cv2
@@ -22,7 +22,7 @@ HF_DEVICE = -1
 
 @st.cache_resource 
 def load_text_models():
-    # print("Loading HuggingFace text models...") # <<< CHANGED: Commented out print >>>
+    # print("Loading HuggingFace text models...") 
     try:
         emotion_classifier = pipeline(
             "text-classification",
@@ -36,7 +36,7 @@ def load_text_models():
             return_all_scores=True,
             device=HF_DEVICE
         )
-        print("--- HuggingFace text models loaded (console log) ---") # Keep console logs for debugging
+        print("--- HuggingFace text models loaded (console log) ---") # console logs for debugging
         return emotion_classifier, sentiment_analyzer
     except Exception as e:
         # st.error(f"Error loading HuggingFace text models: {e}") 
@@ -85,7 +85,7 @@ SENTIMENT_COLOR_MAP = {
 }
 
 
-# ... (analyze_text_emotion function - ensure it checks `if not classifier: return {"error":...}` ) ...
+#  (analyze_text_emotion function - ensure it checks `if not classifier: return {"error":...}` ) 
 def analyze_text_emotion(text, classifier):
     if not classifier: # This check is important
         return {"error": "Emotion classifier model not loaded."}
