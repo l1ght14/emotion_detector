@@ -17,6 +17,7 @@ safetensors==0.5.3
 openai-whisper==20231117
 opencv-python==4.11.0.86
 moviepy==1.0.3
+soundfile==0.13.1
 # (ffmpeg-python and soundfile usually pulled in if needed, or covered by system ffmpeg)
 
 # --- DeepFace Stack ---
