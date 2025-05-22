@@ -1,0 +1,22 @@
+# Virtual Environment
+venv/
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE / Editor specific
+.vscode/
+.idea/
+
+# Temporary files from app
+temp_uploads/
+*.wav # If temp audio files are not always in temp_uploads
+.whisper_cache/ # If you used the local project cache for whisper
+
+# OS specific
+.DS_Store
+Thumbs.db
