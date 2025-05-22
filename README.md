@@ -89,7 +89,7 @@ Model loading (especially for Whisper and DeepFace) and analysis of audio/video 
 
  .
 ├── app.py # Main Streamlit application script
-├── requirements.txt # Python dependencies
+├── requirements.txt & runtime.txt # Python dependencies
 ├── README.md # This file
 ├── .gitignore # Specifies intentionally untracked files
 ├── temp_uploads/ # (Created at runtime for temporary file storage, should be in .gitignore)
